@@ -4,11 +4,13 @@ public class TestarCarro {
         Carro carro1 = new Carro("Roxo","Subawu", 2023);
         Carro carro2 = new Carro("Preto","Mitsubishi", 2019);
 
+        Tela tela = new Tela();
+
         System.out.printf("--_Carro 1_--%s%n", carro1);
         System.out.printf("--_Carro 2_--%s%n", carro2);
 
-        carro1.acelerar(-5.0, 2);
-        carro2.acelerar(10.0, 2);
+        carro1.acelerar(tela.pedirAcel(), tela.pedirTemp());
+        carro2.acelerar(tela.pedirAcel(), tela.pedirTemp());
 
         System.out.printf("--_Carro 1_--%s%n", carro1);
         System.out.printf("--_Carro 2_--%s%n", carro2);        
